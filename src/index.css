@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-orbitron: 'Orbitron', monospace, sans-serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+    --font-tech: 'Share Tech Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-rajdhani);
+    background-color: #030712;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace, sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-tech {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Stark Holographic Grid Background */
+.bg-stark-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.07) 1px, transparent 1px);
+}
+
+.bg-tactical-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(239, 68, 68, 0.09) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 68, 68, 0.09) 1px, transparent 1px);
+}
+
+/* Scanlines overlay */
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.02),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.02)
+  );
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Arc Reactor Glow Keyframes */
+@keyframes arcPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.4), inset 0 0 15px rgba(6, 182, 212, 0.4);
+    filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.6));
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.8), inset 0 0 30px rgba(6, 182, 212, 0.7);
+    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.9));
+  }
+}
+
+.arc-pulse {
+  animation: arcPulse 3s ease-in-out infinite;
+}
+
+@keyframes edithPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4), inset 0 0 15px rgba(239, 68, 68, 0.4);
+    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.6));
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(239, 68, 68, 0.8), inset 0 0 30px rgba(239, 68, 68, 0.7);
+    filter: drop-shadow(0 0 20px rgba(248, 113, 113, 0.9));
+  }
+}
+
+.edith-pulse {
+  animation: edithPulse 2.5s ease-in-out infinite;
+}
+
+/* Custom scrollbar for HUD panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.7);
+}

@@ -1,0 +1,6 @@
+{
+  "name": "J.A.R.V.I.S. & E.D.I.T.H. Holographic AI Suite",
+  "description": "Advanced Stark AI system featuring dynamic game forge, quality code synthesis, EDITH tactical drone defense, modular plugin architecture, voice recognition, and real-time QR phone companion remote control.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
